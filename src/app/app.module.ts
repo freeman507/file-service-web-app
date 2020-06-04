@@ -9,11 +9,14 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { UploadComponent } from './upload/upload.component';
+import { MatFileUploadModule } from 'angular-material-fileupload';
 
 @NgModule({
     declarations: [
         AppComponent,
-        TabelaComponent
+        TabelaComponent,
+        UploadComponent
     ],
     imports: [
         BrowserModule,
@@ -23,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
         HttpClientModule,
         MatButtonModule,
         MatIconModule,
+        MatFileUploadModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,8 +1,4 @@
-.tabela-container {
-    width: 100%;
-    background-color: red;
-}
-
 table {
     width: 100%;
+    margin-bottom: 20px;
 }

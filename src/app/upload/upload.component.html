@@ -1,0 +1,11 @@
+<div [fileUploadInputFor]="fileUploadQueue" class="upload-drop-zone">
+    <mat-icon>attach_file</mat-icon>
+    Arraste arquivos aqui
+</div>
+
+<div>
+    <mat-file-upload-queue #fileUploadQueue [fileAlias]="'file'" [httpUrl]="'http://localhost:8080/arquivo'" multiple>
+        <mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index">
+        </mat-file-upload>
+    </mat-file-upload-queue>
+</div>
