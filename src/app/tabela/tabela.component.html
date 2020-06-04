@@ -1,5 +1,5 @@
 <div class="tabela-container">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
 
         <ng-container matColumnDef="idArquivo">
             <th mat-header-cell *matHeaderCellDef> Código </th>
@@ -8,7 +8,16 @@
 
         <ng-container matColumnDef="nomeArquivo">
             <th mat-header-cell *matHeaderCellDef> Nome do arquivo </th>
-            <td mat-cell *matCellDef="let element"> {{arquivo.nomeArquivo}} </td>
+            <td mat-cell *matCellDef="let arquivo"> {{arquivo.nomeArquivo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="download">
+            <th mat-header-cell *matHeaderCellDef> Download </th>
+            <td mat-cell *matCellDef="let arquivo">
+                <button mat-button (click)="downloadFile(arquivo)">
+                    <mat-icon>attachment</mat-icon>
+                </button>
+            </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
