@@ -8,6 +8,11 @@
 
 .card {
     width: 50%;
-    height: 50%;
+    height: 80%;
     margin-top: 20px;
+}
+
+.titulo{
+    margin-bottom: 20px;
+    font-size: larger;
 }
